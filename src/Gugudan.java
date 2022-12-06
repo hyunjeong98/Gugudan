@@ -1,18 +1,21 @@
-import java.util.Scanner;
-
 public class Gugudan {
+	public static int[] cal(int num) {
+		int[] result = new int[9];
+		for (int i = 0; i < result.length; i++) {
+			result[i] = num * (i + 1);
+		}
+		return result;
+	}
+	
+	public static void print(int[] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println(arr[i]);
+		}
+	}
+	
 	public static void main(String[] args) {
-		System.out.println("출력할 단: ");
-		Scanner scanner = new Scanner(System.in);
-		int num = scanner.nextInt();
-		if (num < 2 || num > 9) {
-			System.out.println("2이상, 9이하의 값만 입력 가능함");
-		} else {
-			System.out.println(num + "단");
-			for (int i = 1; i <= 9; i++) {
-				int result = num * i;
-				System.out.println(num + "*" + i + "=" + result);
-			}
+		for (int j = 2; j < 10; j++) {
+			print(cal(j));
 		}
 	}
 }
