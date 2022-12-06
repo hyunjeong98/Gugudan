@@ -12,10 +12,4 @@ public class Gugudan {
 			System.out.println(arr[i]);
 		}
 	}
-	
-	public static void main(String[] args) {
-		for (int j = 2; j < 10; j++) {
-			print(cal(j));
-		}
-	}
 }
